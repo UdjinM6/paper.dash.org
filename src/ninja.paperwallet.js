@@ -283,5 +283,11 @@ ninja.wallets.paperwallet = {
 		document.getElementById("paperlimitperpage").value = limitperpage;
 		document.getElementById("paperlimit").value = limit;
 		document.getElementById("paperamount").value = ninja.wallets.paperwallet.paperamountDefault;
+	},
+	rpcCommand: function(element) {
+			var paperareabodyBlock = document.getElementById("paperareabody");
+			paperareabodyBlock.classList.toggle('hide');
+			document.getElementById("amountInput").classList.toggle('hide');
+			paperareabodyBlock.style.display = element.checked ? "block" : "none";
 	}
 };

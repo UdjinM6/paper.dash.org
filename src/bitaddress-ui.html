@@ -214,11 +214,13 @@
 						<span><label id="paperlabelencrypt" for="paperencrypt">BIP38 Encrypt?</label> <input type="checkbox" id="paperencrypt" onchange="ninja.wallets.paperwallet.toggleEncrypt(this);" /></span>
 						<span><label id="paperlabelBIPpassphrase" for="paperpassphrase">Passphrase:</label> <input type="text" id="paperpassphrase" /></span>
 						<span><label id="paperlabeladdressesperpage" for="paperlimitperpage">Addresses per page:</label> <input type="text" id="paperlimitperpage" /></span>
-						<span><label id="paperlabelamount" for="paperamount">Amount:</label> <input type="text" id="paperamount" /></span>
+						<span><label for="rpccommands">Generate RPC commands?</label><input type="checkbox" id="rpccommands" onchange="ninja.wallets.paperwallet.rpcCommand(this);" /></span>
+						<span id="amountInput" class="hide"><label id="paperlabelamount" for="paperamount">Amount:</label> <input type="text" id="paperamount" /></span>
 					</div>
+					<div>
 				</div>
 				<div id="paperkeyarea"></div>
-				<div id="paperareabody">
+				<div id="paperareabody" class="hide">
 					<span class="label">Import wallets via importwallet RPC: save text below as a plain text file and use its name in RPC command</span>
 					<textarea rows="20" cols="88" id="paperdumparea"></textarea>
 					<span class="label">Fill wallets via sendmany RPC: confirm addresses below and execute the command via RPC console</span>
